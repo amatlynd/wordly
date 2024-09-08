@@ -15,7 +15,7 @@ class LetterBlock extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: blockColor,
-          borderRadius: BorderRadius.all(Radius.circular(3)),
+          borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
         width: MediaQuery.sizeOf(context).width / 7,
         height: MediaQuery.sizeOf(context).width / 7,
@@ -23,7 +23,8 @@ class LetterBlock extends StatelessWidget {
           child: Text(
             blockLetter,
             textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(
+                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 32),
           ),
         ),
       ),

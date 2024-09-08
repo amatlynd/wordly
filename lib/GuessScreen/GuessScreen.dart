@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wordly/GuessScreen/LetterSection/GuessSection/LetterRow.dart';
+import 'package:wordly/GuessScreen/Keyboard/Keyboard.dart';
+import 'package:wordly/GuessScreen/LetterSection/LetterRow.dart';
 
 class GuessScreen extends StatefulWidget {
   const GuessScreen({super.key});
@@ -15,8 +16,8 @@ class _GuessScreenState extends State<GuessScreen> {
       child: Scaffold(
         body: Container(
           width: MediaQuery.sizeOf(context).width,
-          padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const SizedBox(
                 height: 80,
@@ -28,6 +29,7 @@ class _GuessScreenState extends State<GuessScreen> {
                         height: 5,
                       );
               }),
+              const Keyboard(),
             ],
           ),
         ),
