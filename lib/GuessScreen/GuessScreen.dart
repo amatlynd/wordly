@@ -29,6 +29,9 @@ class _GuessScreenState extends State<GuessScreen> {
                         height: 5,
                       );
               }),
+              const SizedBox(
+                height: 40,
+              ),
               const Keyboard(),
             ],
           ),

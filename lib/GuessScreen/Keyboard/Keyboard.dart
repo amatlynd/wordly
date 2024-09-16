@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:wordly/GuessScreen/Keyboard/KeyboardRow.dart';
+import 'package:wordly/GuessScreen/Keyboard/KeyboardRows/FirstKeyboardRow.dart';
+import 'package:wordly/GuessScreen/Keyboard/KeyboardRows/SecondKeyboardRow.dart';
+import 'package:wordly/GuessScreen/Keyboard/KeyboardRows/ThirdKeyboardRow.dart';
 
 class Keyboard extends StatelessWidget {
   final String letter;
@@ -12,21 +14,19 @@ class Keyboard extends StatelessWidget {
       height: MediaQuery.sizeOf(context).height / 3,
       child: Column(
         children: [
-          KeyboardRow(
+          FirstKeyboardRow(
             numberOfKeys: 10,
           ),
           SizedBox(
             height: 6,
           ),
-          KeyboardRow(
+          SecondKeyboardRow(
             numberOfKeys: 9,
           ),
           SizedBox(
             height: 6,
           ),
-          KeyboardRow(
-            numberOfKeys: 10,
-          )
+          ThirdKeyboardRow(numberOfKeys: 7)
         ],
       ),
     ));

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wordly/GuessScreen/LetterSection/LetterBlock.dart';
 
-class KeyboardKey extends StatefulWidget {
-  const KeyboardKey({super.key});
+class BackspaceKey extends StatefulWidget {
+  const BackspaceKey({super.key});
 
   @override
-  State<KeyboardKey> createState() => _KeyboardKeyState();
+  State<BackspaceKey> createState() => _BackspaceKeyState();
 }
 
-class _KeyboardKeyState extends State<KeyboardKey>
+class _BackspaceKeyState extends State<BackspaceKey>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   bool _visible = true;
@@ -42,14 +41,10 @@ class _KeyboardKeyState extends State<KeyboardKey>
               color: _visible ? Colors.greenAccent : Colors.grey,
               borderRadius: BorderRadius.all(Radius.circular(8))),
           child: const Center(
-            child: Text(
-              'A',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500),
-            ),
-          ),
+              child: Icon(
+            Icons.backspace_outlined,
+            color: Colors.white,
+          )),
         ),
       ),
     );
